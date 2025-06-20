@@ -1,0 +1,89 @@
+nav {
+    display: flex;
+    justify-content: center;
+}
+.menu{
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Seccion Carga */
+#contenedorCarga{
+    position: relative;
+    margin-top: 3rem;
+}
+.seccionCarga {
+    margin: 1rem  auto;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.21);
+    width: 95vw;
+    height: 100vh;
+    background-color: aquamarine;
+    position: absolute;
+    left: calc(5vw/2);
+}
+#cargaEscuelas::before {
+    position: absolute;
+    content: 'Escuelas';
+    font-size: 1.4rem;
+    padding: 0.3rem;
+    text-align: center;
+    z-index: 1;
+    left: 0;
+    width: 165px;
+    height: 35px;
+    top: -35px;
+    border-radius: 8px;
+    background-color: aquamarine;
+    pointer-events: all;
+    cursor: pointer;
+}
+#cargaCurso{
+    z-index: -1;
+    background-color: blueviolet;
+    pointer-events: none;
+}
+
+#cargaCurso::before {
+    position: absolute;
+    content: ' Curso ';
+    font-size: 1.4rem;
+    padding: 0.3rem;
+    text-align: center;
+    z-index: 1;
+    left: 195px;
+    width: 165px;
+    height: 35px;
+    top: -35px;
+    border-radius: 8px;
+    pointer-events: all;
+    cursor: pointer;
+    background-color: blueviolet;
+}
+#cargaAlumno::before {
+    position: absolute;
+    content: ' Alumno ';
+    font-size: 1.4rem;
+    padding: 0.3rem;
+    text-align: center;
+    z-index: 1;
+    left: 390px;
+    width: 165px;
+    height: 35px;
+    top: -35px;
+    border-radius: 8px;
+    pointer-events: all;
+    cursor: pointer;
+    background-color: chartreuse
+}
+#cargaAlumno{
+    z-index: -1;
+    background-color: chartreuse;
+    pointer-events: none;
+}
+.posicionAdelante {
+    z-index: 15 !important;
+}
