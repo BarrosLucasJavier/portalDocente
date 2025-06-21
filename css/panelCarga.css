@@ -21,7 +21,7 @@ nav {
     box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.21);
     width: 95vw;
     height: 100vh;
-    background-color: aquamarine;
+    background-color:#F0F4FF;
     position: absolute;
     left: calc(5vw/2);
 }
@@ -37,7 +37,7 @@ nav {
     height: 35px;
     top: -35px;
     border-radius: 8px;
-    background-color: aquamarine;
+    background-color:#F0F4FF;
     pointer-events: all;
     cursor: pointer;
 }
@@ -91,19 +91,27 @@ nav {
 #institucionContenedor {
     outline: 1px solid rebeccapurple;
     padding: 1rem;
+    background-color: white;
 }
-input{
-    padding: 0.3rem 0.5rem;
+input, select{
+    padding: 0.5rem 0.7rem;
     border: none;
     border-radius: 4px;
+    background-color: #F0F4FF;
+    border: 1px solid #e8ecf7;
+    width: 350px;
+}
+input:focus {
+    outline: none;
+    border: 1px solid rgb(161, 161, 161);
 }
 .inputContenedor {
-    margin: 1.5rem 0;
+    margin: 3.5rem 0;
     position: relative;
 }
 .inputContenedor label{
     position: absolute;
     top: -15px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-family: monospace;
 }
