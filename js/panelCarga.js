@@ -1,6 +1,6 @@
 import { provincias } from "../assets/data/provincias.js";
 import { ciudades } from "../assets/data/ciudades.js";
-
+/* Pestañas */
 const cargaCurso = document.getElementById('cargaCurso');
 const cargaEscuelas = document.getElementById('cargaEscuelas');
 const cargaAlumno = document.getElementById('cargaAlumno');
@@ -47,3 +47,22 @@ selectProvincias.addEventListener('click',()=>{
         }    
     }
 });
+
+/* carga de lista */
+const listaEscuelas = document.getElementById('listadoEscuelas');
+const btnEscuela = document.getElementById('btnEscuela');
+const inputInstitucion = document.getElementById('institucion')
+const inputDireccion = document.getElementById('direccion')
+
+btnEscuela.addEventListener('click',(e)=>{
+    e.preventDefault();
+    let valoresEscuelas = [inputInstitucion.value, selectProvincias.value,selectCiudad.value, inputDireccion.value];
+    let tr = document.createElement('tr');
+
+    for (const valor of valoresEscuelas) {
+        let td = document.createElement('td');
+        td.textContent = valor;
+        tr.appendChild(td);
+    }
+    listaEscuelas.appendChild(tr)
+})

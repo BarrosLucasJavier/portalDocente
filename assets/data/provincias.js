@@ -22,5 +22,5 @@ export const provincias = [
     "Santiago del Estero",
     "Tierra del Fuego",
     "Tucumán",
-    "Ciudad Autónoma de Buenos Aires",
+    "Ciudad Autónoma De Buenos Aires",
 ];

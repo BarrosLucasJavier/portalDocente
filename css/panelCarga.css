@@ -90,8 +90,10 @@ nav {
 /* Formulario */
 #institucionContenedor {
     outline: 1px solid rebeccapurple;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: white;
+    display: flex;
+    justify-content: space-between;
 }
 input, select{
     padding: 0.5rem 0.7rem;
@@ -114,4 +116,18 @@ input:focus {
     top: -15px;
     font-size: 0.9rem;
     font-family: monospace;
+}
+#btnEscuela
+{
+    border: 1px solid lightblue;
+    cursor: pointer;
+}
+/* listado */
+.tabla th {
+    padding: 0.7rem;
+    background-color:aqua;
+}
+.tabla td {
+    padding: 1rem;
+    background-color: antiquewhite;
 }

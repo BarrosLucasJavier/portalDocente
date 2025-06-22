@@ -1,58 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
     <title>Portal Carga</title>
 </head>
+
 <body>
     <header>
         <nav>
             <ul class="menu">
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Carga de datos</a></li>
-                    <li><a href="">Asistencia</a></li>
-                    <li><a href="">Listas de cotejo</a></li>
-                    <li><a href="">Estadísticas</a></li>
-                    <li><a href="">Preguntas Frecuentes</a></li>
-                </ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Carga de datos</a></li>
+                <li><a href="">Asistencia</a></li>
+                <li><a href="">Listas de cotejo</a></li>
+                <li><a href="">Estadísticas</a></li>
+                <li><a href="">Preguntas Frecuentes</a></li>
+            </ul>
         </nav>
     </header>
     <main id="contenedorCarga">
         <section id="cargaEscuelas" class="seccionCarga">
             <form action="" method="get">
                 <div id="institucionContenedor">
-                    <div class="inputContenedor">
-                        <label for="institucion">Nombre de la Institución</label>
-                        <input type="text" name="institucion" id="institucion">
+                    <div id="formularioInstitucion">
+                        <div class="inputContenedor">
+                            <label for="institucion">Nombre de la Institución</label>
+                            <input type="text" name="institucion" id="institucion" />
+                        </div>
+                        <div class="inputContenedor">
+                            <label for="provincia">Provincia</label>
+                            <select name="provincia" id="provincia">
+                                <option value="">Seleccione una Provincia</option>
+                            </select>
+                        </div>
+                        <div class="inputContenedor">
+                            <label for="ciudad">Ciudad</label>
+                            <select name="ciudad" id="ciudad">
+                                <option value="">Seleccione una Ciudad</option>
+                            </select>
+                        </div>
+                        <div class="inputContenedor">
+                            <label for="direccion">Dirección</label>
+                            <input type="text" name="direccion" id="direccion" />
+                        </div>
+                        <div class="inputContenedor">
+                            <input type="submit" value="Cargar" id="btnEscuela">
+                        </div>
                     </div>
-                    <div class="inputContenedor">
-                        <label for="provincia">Provincia</label>
-                        <select name="provincia" id="provincia">
-                            <option value="">Seleccione una Provincia</option>
-                        </select>
-                    </div>
-                    <div class="inputContenedor">
-                        <label for="ciudad">Ciudad</label>
-                        <select name="ciudad" id="ciudad">
-                            <option value="">Seleccione una Ciudad</option>
-                        </select>
-                    </div>
-                    <div class="inputContenedor">
-                        <label for="direccion">Dirección</label>
-                        <input type="text" name="direccion" id="direccion">
+                    <div >
+                        <table class="tabla">
+                            <tbody id="listadoEscuelas">
+                                <tr>
+                                    <th>Institución</th>
+                                    <th>Provincia</th>
+                                    <th>Ciudad</th>
+                                    <th>Dirección</th>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
                     </div>
                 </div>
             </form>
         </section>
-        <section id="cargaCurso" class="seccionCarga">
-            
-        </section>
-        <section id="cargaAlumno" class="seccionCarga">
-            
-        </section>
+        <section id="cargaCurso" class="seccionCarga"></section>
+        <section id="cargaAlumno" class="seccionCarga"></section>
     </main>
     <script src="../js/panelCarga.js" type="module"></script>
 </body>
+
 </html>
