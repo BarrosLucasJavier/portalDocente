@@ -27,3 +27,14 @@ a{
 li{
     list-style: none;
 }
+
+/* validaciones */
+.errorInput{
+    background-color: rgba(248, 28, 28, 0.462);
+    border: 2px solid red;
+}
+.spanError {
+    margin-left: 1rem;
+    color: red;
+    font-weight: bold;
+}

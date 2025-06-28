@@ -1329,7 +1329,7 @@ export const ciudades =[
     },
     {
         id: 14,
-        nombre: "Còrdoba",
+        nombre: "Córdoba",
         ciudades: [
             { id: "1310", nombre: "Achiras" },
             { id: "1311", nombre: "Adelia Maria" },
