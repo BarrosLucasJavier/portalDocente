@@ -51,7 +51,7 @@
                             <input type="submit" value="Cargar" id="btnEscuela">
                         </div>
                     </div>
-                    <div >
+                    <div class="contenedorTabla" >
                         <table id="tablaEscuela" class="tabla">
                             <tbody id="listadoEscuelas">
                                 <tr>
@@ -68,9 +68,123 @@
                 </div>
             </form>
         </section>
-        <section id="cargaCurso" class="seccionCarga"></section>
-        <section id="cargaAlumno" class="seccionCarga"></section>
+        <section id="cargaCurso" class="seccionCarga">
+            <form action="">
+                <div id="cursoContenedor">
+                    <div>
+                        <div class="inputContenedor">
+                            <label for="turno">Turno</label>
+                            <select name="turno" id="turno">
+                                <option value="">Selecciona una opción</option>
+                                <option value="Maniana">Mañana</option>
+                                <option value="Tarde">Tarde</option>
+                                <option value="Noche">Noche</option>
+                            </select>
+                        </div>
+                        <div class="inputContenedor">
+                            <label for="anioCurso">Año</label>
+                            <select name="anioCurso" id="anioCurso">
+                                <option value="">Seleccione una opción</option>
+                                <option value="1">1º</option>
+                                <option value="2">2º</option>
+                                <option value="3">3º</option>
+                                <option value="4">4º</option>
+                                <option value="5">5º</option>
+                                <option value="6">6º</option>
+                                <option value="7">7º</option>
+                            </select>
+                        </div>
+                        <div class="inputContenedor">
+                            <label for="divisionCursoTipo">Tipo División</label>
+                            <select name="divisionCursoTipo" id="divisionCursoTipo">
+                                <option value="">Seleccione un opción</option>
+                                <option value="letra">Letra</option>
+                                <option value="numero">Número</option>
+                            </select>
+                        </div>
+                        <div class="inputContenedor">
+                            <label for="divisionCurso">División</label>
+                            <select name="divisionCurso" id="divisionCurso">
+                            </select>
+                        </div>
+                        <div class="inputContenedor">
+                            <input type="submit" value="Cargar" id="btnCurso">
+                        </div>
+                    </div>
+
+                    <div class="contenedorTabla">
+                        <table id="tablaCurso" class="tabla">
+                            <tbody id="listadoCursos">
+                                <tr>
+                                    <th>Turno</th>
+                                    <th>Año</th>
+                                    <th>División</th>
+                                    <th>Borrar</th>
+                                </tr>
+                            </tbody>   
+                        </table>
+                    </div>
+                </div>              
+            </form>
+        </section>
+        <section id="cargaAlumno" class="seccionCarga">
+            <form action="">
+                <div id="alumnoContenedor">
+                    <div>
+                        <div class="inputContenedor">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" name="apellido" id="apellido">
+                        </div>
+                        <div class="inputContenedor">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre">
+                        </div>
+                        <div class="inputContenedor">
+                            <input type="submit" value="Cargar" id="btnAlumno">
+                        </div>
+                    </div>
+
+                    <div class="contenedorTabla">
+                        <table id="tablaAlumno" class="tabla">
+                            <tbody id="listadoAlumnos">
+                                <tr>
+                                    <th>Apellido</th>
+                                    <th>Nombre</th>
+                                    <th>Borrar</th>
+                                </tr>
+                            </tbody>   
+                        </table>
+                    </div>
+                </div>              
+            </form>
+        </section>
     </main>
+    <footer>
+        <div class="tituloFooter">
+            <h2>Portal Docente</h2>
+        </div>
+        <div class="subscribete">
+            <p>Un lugar diseñado para docentes de todos los niveles</p>
+            <div class="contenedorSubscribete">
+                <input type="email" name="email" id="email" placeholder="Correo Electronico">
+                <button>Subscríbete</button>
+            </div>
+        </div>
+        <div class="links">
+            <div class="contenedorLink">
+                <i class="fa-brands fa-youtube"><a href="#">Tutoriales</a></i>
+            </div>
+            <div class="contenedorLink">
+                <i class="fa-brands fa-instagram"><a href="#">Seguinos</a></i>
+            </div>
+            <div class="contenedorLink">
+                <i class="fa-brands fa-x-twitter"><a href="#">Novedades</a></i>
+            </div>
+            <div class="contenedorLink">
+                <i class="fa-brands fa-github"><a href="https://github.com/BarrosLucasJavier/portalDocente" target="_blank">Repo</a></i>
+            </div>
+        </div>
+    </footer>
     <script src="../js/panelCarga.js" type="module"></script>
 </body>
 

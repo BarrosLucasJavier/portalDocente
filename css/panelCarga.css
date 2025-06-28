@@ -12,7 +12,8 @@ nav {
 /* Seccion Carga */
 #contenedorCarga{
     position: relative;
-    margin-top: 3rem;
+    min-height: 100vh;
+    margin-bottom: 3rem;
 }
 .seccionCarga {
     margin: 1rem  auto;
@@ -43,7 +44,7 @@ nav {
 }
 #cargaCurso{
     z-index: -1;
-    background-color: blueviolet;
+    background-color: rgb(224, 197, 252);
     pointer-events: none;
 }
 
@@ -61,7 +62,7 @@ nav {
     border-radius: 8px;
     pointer-events: all;
     cursor: pointer;
-    background-color: blueviolet;
+    background-color: rgb(224, 197, 252);
 }
 #cargaAlumno::before {
     position: absolute;
@@ -77,23 +78,25 @@ nav {
     border-radius: 8px;
     pointer-events: all;
     cursor: pointer;
-    background-color: chartreuse
+    background-color: rgb(197, 224, 170)
 }
 #cargaAlumno{
     z-index: -1;
-    background-color: chartreuse;
+    background-color: rgb(197, 224, 170);
     pointer-events: none;
 }
 .posicionAdelante {
     z-index: 15 !important;
+    pointer-events: auto !important;
 }
 /* Formulario */
-#institucionContenedor {
-    outline: 1px solid rebeccapurple;
+#institucionContenedor, #cursoContenedor, #alumnoContenedor {
+    outline: 1px solid rgb(36, 35, 37);
     padding: 1.5rem;
     background-color: white;
     display: flex;
     justify-content: space-between;
+    gap: 0.5rem;
 }
 input, select{
     padding: 0.5rem 0.7rem;
@@ -125,9 +128,15 @@ input:focus {
 /* listado */
 .tabla th {
     padding: 0.7rem;
-    background-color:aqua;
+    background-color:rgb(158, 211, 211);
 }
 .tabla td {
     padding: 1rem;
     background-color: antiquewhite;
+}
+table {
+    width: 100%;
+}
+.contenedorTabla {
+    flex-grow: 1;
 }

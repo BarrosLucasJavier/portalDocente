@@ -16,9 +16,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Geist', sans-serif;
-}
 
 a{
     text-decoration: none;
@@ -27,7 +24,15 @@ a{
 li{
     list-style: none;
 }
+/* estructura */
 
+body {
+    font-family: 'Geist', sans-serif;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto 250px;
+}
 /* validaciones */
 .errorInput{
     background-color: rgba(248, 28, 28, 0.462);
@@ -37,4 +42,7 @@ li{
     margin-left: 1rem;
     color: red;
     font-weight: bold;
+}
+.desaparece {
+    display: none;
 }

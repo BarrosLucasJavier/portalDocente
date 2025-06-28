@@ -26,7 +26,7 @@ export function completo(inputs) {
             cantValidos ++;
         }
     }
-    if (cantValidos === 4) {
+    if (cantValidos === inputs.length) {
         completo = true;
     }
     return completo;    
