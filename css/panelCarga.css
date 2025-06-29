@@ -21,74 +21,17 @@ nav {
     border-radius: 10px;
     box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.21);
     width: 95vw;
-    height: 100vh;
     background-color:#F0F4FF;
-    position: absolute;
-    left: calc(5vw/2);
-}
-#cargaEscuelas::before {
-    position: absolute;
-    content: 'Escuelas';
-    font-size: 1.4rem;
-    padding: 0.3rem;
-    text-align: center;
-    z-index: 1;
-    left: 0;
-    width: 165px;
-    height: 35px;
-    top: -35px;
-    border-radius: 8px;
-    background-color:#F0F4FF;
-    pointer-events: all;
-    cursor: pointer;
-}
-#cargaCurso{
-    z-index: -1;
-    background-color: rgb(224, 197, 252);
-    pointer-events: none;
 }
 
-#cargaCurso::before {
-    position: absolute;
-    content: ' Curso ';
-    font-size: 1.4rem;
-    padding: 0.3rem;
-    text-align: center;
-    z-index: 1;
-    left: 195px;
-    width: 165px;
-    height: 35px;
-    top: -35px;
-    border-radius: 8px;
-    pointer-events: all;
-    cursor: pointer;
+#cargaCurso{
     background-color: rgb(224, 197, 252);
 }
-#cargaAlumno::before {
-    position: absolute;
-    content: ' Alumno ';
-    font-size: 1.4rem;
-    padding: 0.3rem;
-    text-align: center;
-    z-index: 1;
-    left: 390px;
-    width: 165px;
-    height: 35px;
-    top: -35px;
-    border-radius: 8px;
-    pointer-events: all;
-    cursor: pointer;
-    background-color: rgb(197, 224, 170)
-}
+
 #cargaAlumno{
-    z-index: -1;
     background-color: rgb(197, 224, 170);
-    pointer-events: none;
 }
-.posicionAdelante {
-    z-index: 15 !important;
-    pointer-events: auto !important;
-}
+
 /* Formulario */
 #institucionContenedor, #cursoContenedor, #alumnoContenedor {
     outline: 1px solid rgb(36, 35, 37);
