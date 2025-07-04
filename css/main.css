@@ -137,6 +137,11 @@ li i:hover {
     transition: all .7s;
 }
 .animaText:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: all  .5s ease-out;
+}
+/* activo para navegacion */
+.activo {
+    text-shadow: 1px 1px 10px white;
+    text-decoration: underline;
 }
