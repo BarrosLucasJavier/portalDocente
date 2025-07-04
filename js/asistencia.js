@@ -14,15 +14,19 @@ window.addEventListener('DOMContentLoaded',()=>{
     });
 
     escuela.addEventListener('click',(e)=>{
+        const aniosArray = [];
         const escuelaSelect = +e.target.value;
         localStorage.setItem('escuela', escuelaSelect);
-        /* limpiar repetidos */
+        
         if (e.target.value) {
             user.institucion[escuelaSelect].curso.forEach((aniox)=>{
-                let option = document.createElement('option');
-                option.textContent = aniox.anio;
-                option.value = aniox.anio;
-                anio.appendChild(option)
+                if (!aniosArray.includes(+aniox.anio)) {
+                    aniosArray.push(+aniox.anio);
+                    let option = document.createElement('option');
+                    option.textContent = aniox.anio;
+                    option.value = aniox.anio;
+                    anio.appendChild(option)
+                }
             }) 
         }
     })
@@ -32,9 +36,7 @@ window.addEventListener('DOMContentLoaded',()=>{
         localStorage.setItem('anio',anioSelect);
         division.innerHTML='<option>Seleccione una Division</option>';
         
-        user.institucion[escuelaSelect].curso.forEach(curs => {
-            console.log(curs);
-            
+        user.institucion[escuelaSelect].curso.forEach(curs => {            
             if (+curs.anio == anioSelect ) {
                 let option = document.createElement('option');
                 option.textContent = curs.division;
@@ -44,7 +46,10 @@ window.addEventListener('DOMContentLoaded',()=>{
         })
         
     })
-    
+    division.addEventListener('click',(e)=>{
+        const divisionSelect = e.target.value;
+        const escuelaSelect = localStorage.getItem('escuela');
+    })
 })
 
 
