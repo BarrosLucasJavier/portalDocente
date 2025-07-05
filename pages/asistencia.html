@@ -25,6 +25,7 @@
     </header>
     <main id="contenedorAsistencia">
         <div class="seteoDatos">
+            <h3>Seleccione el curso</h3>
             <select name="escuela" id="escuela">
                 <option value="">Seleccione una institución</option>
             </select>
@@ -34,19 +35,46 @@
             <select name="division" id="division">
                 <option value="">Seleccione una división</option>
             </select>
+            <h4>Referencias</h4>
+            <span>P = Presente</span>
+            <span>A = Ausente</span>
+            <span>T = Llegada tarde</span>
+            <span>P = Justificado</span>
         </div>
         <div class="listaAsistencia">
-            <table>
+            <table class="tablaAsistencia">
                 <thead>
-                    <th>Escuela</th>
-                    <th>Año</th>
-                    <th>Division</th>
+                    <th>Alumno</th>
+                    <th>L</th>
+                    <th>M</th>
+                    <th>M</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>L</th>
+                    <th>M</th>
+                    <th>M</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>L</th>
+                    <th>M</th>
+                    <th>M</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>L</th>
+                    <th>M</th>
+                    <th>M</th>
+                    <th>J</th>
+                    <th>V</th> 
                 </thead>
-                <tbody>
+                <tbody id="tablaAsistencia">
                     <tr>
                     </tr>
                 </tbody>
             </table>
+            <div class="botones">
+                <button id="guardar">Guardar</button>
+                <button id="cancelar">Cancelar</button>
+            </div>
         </div>
     </main>
     <footer>

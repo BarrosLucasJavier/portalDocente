@@ -1,0 +1,57 @@
+#contenedorAsistencia {
+    padding: 1rem;
+}
+
+/* seteo datos */
+.seteoDatos {
+    margin: 1rem 0;
+}
+.seteoDatos select {
+    padding: 0.5rem 0.7rem;
+    margin: 1rem 0.5rem ;
+}
+.seteoDatos span {
+    margin: 1rem 1.5rem 1.5rem 0;
+    color: #524B47;
+}
+.seteoDatos h4 {
+    margin: 1rem 0 0.4rem 0;
+}
+/* tabla */
+
+.tablaAsistencia th {
+    padding: 0.2rem;
+    background-color:rgb(158, 211, 211);
+}
+.tablaAsistencia td {
+    padding: 0.2rem;
+    background-color: antiquewhite;
+}
+.tablaAsistencia select {
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+    border: none;
+}
+table.tablaAsistencia{
+    border-spacing:0.1rem 0.3rem;
+    background-color: rgb(101, 101, 101);
+}
+/* botones */
+.botones {
+    margin: 1rem;
+    text-align: center;
+}
+.botones button {
+    padding: 0.7rem 1rem;
+    border: none;
+    margin: 0 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#guardar {
+    background-color: rgb(52, 210, 84);
+}
+#cancelar {
+    background-color: burlywood;
+}

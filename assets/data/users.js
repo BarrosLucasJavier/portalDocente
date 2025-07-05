@@ -65,20 +65,20 @@ export const user = [
                         division: 'C',
                         turno: 'Tarde',
                         alumnos: [{
-                            nombre: 'Julian',
-                            apellido: 'Romual'
+                            nombre: 'Alonso',
+                            apellido: 'Suter'
                         },
                         {
-                            nombre: 'Aldana',
-                            apellido: 'Miyun'
+                            nombre: 'Mirta',
+                            apellido: 'Minujin'
                         },
                         {
-                            nombre: 'Pablo',
-                            apellido: 'Pilo'
+                            nombre: 'Blas',
+                            apellido: 'Pascal'
                         },
                         {
                             nombre: 'Luis',
-                            apellido: 'Jadul'
+                            apellido: 'Fonno'
                         },
                         {
                             nombre: 'Ana Maria',

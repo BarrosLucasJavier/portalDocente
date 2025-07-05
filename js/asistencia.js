@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     const escuela = document.getElementById('escuela');
     const anio = document.getElementById('anio');
     const division = document.getElementById('division');
+    const tablaAsist = document.getElementById('tablaAsistencia');
     
     user.institucion.forEach((instituc,index) => {
         let option = document.createElement('option');
@@ -14,6 +15,8 @@ window.addEventListener('DOMContentLoaded',()=>{
     });
 
     escuela.addEventListener('click',(e)=>{
+        anio.innerHTML = '<option>Seleccione un año</option>';
+        division.innerHTML='<option>Seleccione una division</option>';
         const aniosArray = [];
         const escuelaSelect = +e.target.value;
         localStorage.setItem('escuela', escuelaSelect);
@@ -28,13 +31,16 @@ window.addEventListener('DOMContentLoaded',()=>{
                     anio.appendChild(option)
                 }
             }) 
+        } else{
+            tablaAsist.innerHTML='';
         }
     })
+
     anio.addEventListener('click',(e)=>{
         const anioSelect = +e.target.value;
         const escuelaSelect = localStorage.getItem('escuela');
         localStorage.setItem('anio',anioSelect);
-        division.innerHTML='<option>Seleccione una Division</option>';
+        division.innerHTML='<option>Seleccione una division</option>';
         
         user.institucion[escuelaSelect].curso.forEach(curs => {            
             if (+curs.anio == anioSelect ) {
@@ -46,11 +52,32 @@ window.addEventListener('DOMContentLoaded',()=>{
         })
         
     })
+
     division.addEventListener('click',(e)=>{
+        tablaAsist.innerHTML='';
         const divisionSelect = e.target.value;
         const escuelaSelect = localStorage.getItem('escuela');
+        const anioSelect = +localStorage.getItem('anio');
+        let alumnado =[];
+        const selectAsistencia = `<select class="asistencia-select">
+                                    <option value=""></option>
+                                    <option value="P">P</option>
+                                    <option value="A">A</option>
+                                    <option value="T">T</option>
+                                    <option value="J">J</option>
+                                </select>`;
+
+        user.institucion[escuelaSelect].curso.forEach((curs, index) =>{          
+            if (+curs.anio === anioSelect && curs.division === divisionSelect) {
+                alumnado = user.institucion[escuelaSelect].curso[index].alumnos;
+            }
+        })
+
+        alumnado.forEach(alumno => {
+            const fila = document.createElement('tr');
+            fila.innerHTML = `<td>${alumno.apellido}, ${alumno.nombre}</td>` + `<td>${selectAsistencia}</td>`.repeat(20)
+            tablaAsist.appendChild(fila)    
+        })
+        
     })
 })
-
-
-
