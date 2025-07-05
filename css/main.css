@@ -57,7 +57,6 @@ footer {
     position: relative;
     color: white;
 }
-
 .tituloFooter {
     position: absolute;
     z-index: 0;
@@ -106,7 +105,6 @@ footer {
     justify-content: space-evenly;
     margin: 2rem 0;
 }
-
 .contenedorLink a {
     margin-left: 1rem;
 }
@@ -115,7 +113,74 @@ footer {
     z-index: 2;
     text-align: center;
 }
-/* header */
+/* header primero */
+.headerIndex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+.bienvenida {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #8C7D73;
+}
+.headerIndex button{
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #8C7D73;
+    color: white;
+    display: flex;
+    gap: 1rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+.headerImg {
+    min-height: 600px;
+    background-image: url('../assets/img/header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.blur {
+    backdrop-filter: blur(8px);
+    background-color: #ffffff5b;
+    position: absolute;
+    left: 40%;
+    top: 50px;
+    width: 750PX;
+    height: 300PX;
+    border-radius: 18px;
+    padding: 1rem;
+}
+.headerImg h1{
+    font-size: 2rem;
+}
+.headerImg h2 {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+}
+
+.lunaContainer {
+    position: relative;
+    color: red;
+    font-size: 3.2rem;
+}
+.luna{
+    position: absolute;
+    left: -10%;
+    top: 64px;
+    width: 250px;
+    height: 250px;
+    transform: rotate(-40deg);
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 10px -10px 0 -10px red;
+}
+
+/* header Secundario*/
 nav {
     display: flex;
     justify-content: center;
@@ -153,4 +218,55 @@ li i:hover {
 .activo {
     text-shadow: 1px 1px 10px white;
     text-decoration: underline;
+}
+
+/* main */
+.seccionMain {
+    min-height: 100vh;
+    margin: 1rem 0;
+    position: relative;
+}
+
+/* tarjetas */
+.contenedorTarjetas {
+    position: absolute;
+    top: 540px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.tarjeta {
+    background-color: white;
+    width: 180px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 14px;
+    box-shadow: 2px 5px 10px 10px rgba(0, 0, 0, 0.17);
+}
+.tarjeta i {
+    font-size: 2rem;
+    background-color: #323232;
+    padding: 0.4rem;
+    border-radius: 4px;
+    color: white;
+}
+.tarjeta p {
+    font-size: 0.8rem;
+    text-align: center;
+}
+/* objetivos */
+.contenedorObjetivos {
+    height: 450px;
+    margin: 10rem 0 7rem 0;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+.contenedorObjetivos img {
+    width: 50%;
+    border-radius: 8px;
 }
