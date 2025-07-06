@@ -181,3 +181,19 @@ export const user = [
     }
 
 ]
+export const usuarios = [
+    {
+        id: 1,
+        correo: 'test@gmail.com',
+        nombre: 'Marcela',
+        apellido: 'Mitre',
+        contrasenia: '12345678'
+    },
+    {
+        id: 2,
+        correo: 'test2@gmail.com',
+        nombre: 'Juan',
+        apellido: 'Somelier',
+        contrasenia: 'abcdfghi'
+    }
+]

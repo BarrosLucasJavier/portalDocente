@@ -27,9 +27,15 @@
                 <form action="" class="formLogin">
                     <h3>Iniciar Sesión</h3>
                     <small>Ingrese sus datos</small>
-                    <input type="text" name="usuarioL" id="usuarioL" placeholder="Email">
-                    <input type="password" name="passwordL" id="passwordL" placeholder="Contraseña">
-                    <button>Ingresar</button>
+                    <div class="inputContenedor">
+                        <input type="text" name="usuarioL" id="usuarioL" placeholder="" required autocomplete="off">
+                        <label for="usuarioL">Correo</label>
+                    </div>
+                    <div class="inputContenedor">
+                        <input type="text" name="passwordL" id="passwordL" placeholder="" required autocomplete="off">
+                        <label for="passwordL">Contraseña</label>
+                    </div>
+                    <button id="login">Ingresar</button>
                     <small>No tenes cuenta?</small>
                     <button id="registro">Registrate</button>
                 </form>

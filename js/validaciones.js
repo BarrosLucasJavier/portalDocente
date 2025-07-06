@@ -41,7 +41,7 @@ export function validaMail(input) {
             } else {
                 if (partes[1].includes('.')) {
                     if ((partes[1].length - partes[1].lastIndexOf('.')) > 2) {
-                        
+                        return true
                     } else {
                         colocaError(input, 'Faltan al menos dos caracteres despues del punto');
                     }
