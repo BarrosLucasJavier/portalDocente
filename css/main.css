@@ -1,5 +1,6 @@
 @import url("./panelCarga.css");
 @import url("./asistencia.css");
+@import url("./registro.css");
 
 
 /* FUENTES */
@@ -126,7 +127,7 @@ footer {
     gap: 1rem;
     color: #8C7D73;
 }
-.headerIndex button{
+.btnRegistrar{
     padding: 0.7rem 1rem;
     border: none;
     border-radius: 4px;
@@ -136,6 +137,7 @@ footer {
     gap: 1rem;
     font-weight: bolder;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 .headerImg {
     min-height: 600px;
@@ -162,7 +164,6 @@ footer {
     font-size: 2.4rem;
     margin-bottom: 3rem;
 }
-
 .lunaContainer {
     position: relative;
     color: red;
@@ -261,12 +262,68 @@ li i:hover {
 /* objetivos */
 .contenedorObjetivos {
     height: 450px;
-    margin: 10rem 0 7rem 0;
-    padding: 1rem;
+    margin: 10rem 0 1rem 0;
+    padding: 2rem 1rem;
     display: flex;
     gap: 1rem;
 }
 .contenedorObjetivos img {
     width: 50%;
     border-radius: 8px;
+}
+.objetivos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.objetivos h4, .objetivos span {
+    color: red;
+    font-size: 1.8rem;
+}
+/* opiniones */
+.contenedorOpiniones {
+    padding: 1rem;
+    text-align: center;
+}
+.contenedorOpiniones h3{
+    color: red;
+    margin: 0.7rem 0;
+}
+.contenedorOpiniones h2 {
+    margin: 1.5rem 0;
+}
+.contenedorTarje {
+    width: 280px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.297);
+    margin: 1rem 0;
+}
+.opiniones {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+}
+.headOpinion {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.headOpinion img {
+    width: 55px;
+    border-radius: 8px;
+}
+.headOpinion h5{
+    color: red;
+}
+.opinion p{
+    font-size: 0.7rem;
+    margin: 0.5rem 0;
+}
+.identificacion h4{
+    margin-bottom: 0.5rem;
+}
+.estrellas{
+    color: rgb(255, 217, 0);
 }
