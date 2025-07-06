@@ -29,9 +29,6 @@
     gap: 1.5rem;
 }
 .formLogin input{
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    border: 1px solid rgba(128, 128, 128, 0.268);
     width: 75%;
 }
 .formLogin button{
@@ -41,4 +38,5 @@
     border: none;
     background-color: #8C7D73;
     color: white;
+    cursor: pointer;
 }

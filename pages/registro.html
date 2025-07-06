@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,15 +23,42 @@
     </header>
     <main>
         <div class="contenedorLogin">
-            <div class="datos">
+            <div class="datos" id="formLogin">
                 <form action="" class="formLogin">
-                    <h3>Bienvenid@</h3>
+                    <h3>Iniciar Sesión</h3>
                     <small>Ingrese sus datos</small>
-                    <input type="text" name="usuario" id="usuario" placeholder="Email">
-                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                    <input type="text" name="usuarioL" id="usuarioL" placeholder="Email">
+                    <input type="password" name="passwordL" id="passwordL" placeholder="Contraseña">
                     <button>Ingresar</button>
                     <small>No tenes cuenta?</small>
-                    <button>Registrate</button>
+                    <button id="registro">Registrate</button>
+                </form>
+            </div>
+            <div class="datos" id="formRegistro">
+                <form action="" class="formLogin">
+                    <h3>Registro</h3>
+                    <small>Ingrese sus datos</small>
+                    <div class="inputContenedor">
+                        <input type="text" name="emailR" id="emailR" placeholder="" required autocomplete="off">
+                        <label for="emailR">Correo</label>
+                    </div>
+                    <div class="inputContenedor">
+                        <input type="text" name="nombre" id="nombre" placeholder="" required autocomplete="off">
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <div class="inputContenedor">
+                        <input type="text" name="apellido" id="apellido" placeholder="" required autocomplete="off">
+                        <label for="apellido">Apellido</label>
+                    </div>
+                    <div class="inputContenedor">
+                        <input type="password" name="contrasenia" id="contrasenia" placeholder="" required autocomplete="off">
+                        <label for="contrasenia">Contraseña</label>
+                    </div>
+                    <div class="inputContenedor">
+                        <input type="password" name="contrasenia2" id="contrasenia2"placeholder="" required autocomplete="off">
+                        <label for="contrasenia2">Repetir Contraseña</label>
+                    </div>
+                    <button id="btnRegistrar">Registrar</button>
                 </form>
             </div>
             <div class="imgLogin">
@@ -68,6 +95,6 @@
             <p>&copy; 2025 Lucas. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src="./js/main.js" type="module"></script>
+    <script src="../js/registro.js" type="module"></script>
 </body>
 </html>
