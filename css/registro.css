@@ -9,6 +9,9 @@
 .datos {
     width: 50%;
     padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    color: var(--colorFont);
 }
 .imgLogin{
     background-image: url('../assets/img/login.png');
@@ -36,7 +39,7 @@
     padding: 0.5rem 1rem;
     border-radius: 6px;
     border: none;
-    background-color: #8C7D73;
+    background-color:var(--colorPpal);
     color: white;
     cursor: pointer;
 }

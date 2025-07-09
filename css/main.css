@@ -1,8 +1,13 @@
 @import url("./panelCarga.css");
 @import url("./asistencia.css");
 @import url("./registro.css");
+@import url("./cotejo.css");
+@import url("./faqs.css");
 
-
+:root {
+    --colorPpal: #915EE1;
+    --colorFont: #313131;
+}
 /* FUENTES */
 @font-face {
     font-family: 'Geist';
@@ -34,6 +39,8 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 70px auto 350px;
+    background-image: url('../assets/img/fondo.png');
+    color: var(--colorFont);
 }
 /* validaciones */
 .errorInput{
@@ -51,12 +58,12 @@ body {
 /* footer */
 
 footer {
-    background-image: url('../assets/img/footer.jpg');
+    background-image: url('../assets/img/footer.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    color: white;
+    color: var(--colorFont);
 }
 .tituloFooter {
     position: absolute;
@@ -125,14 +132,14 @@ footer {
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: #8C7D73;
+    color: var(--colorPpal);
 }
 .btnRegistrar{
     padding: 0.7rem 1rem;
     border: none;
     border-radius: 4px;
-    background-color: #8C7D73;
-    color: white;
+    background-color:var(--colorPpal);
+    color: var(--colorFont);
     display: flex;
     gap: 1rem;
     font-weight: bolder;
@@ -166,7 +173,7 @@ footer {
 }
 .lunaContainer {
     position: relative;
-    color: red;
+    color:var(--colorPpal);
     font-size: 3.2rem;
 }
 .luna{
@@ -178,7 +185,7 @@ footer {
     transform: rotate(-40deg);
     border-radius: 50%;
     background: transparent;
-    box-shadow: 10px -10px 0 -10px red;
+    box-shadow: 10px -10px 0 -10px var(--colorPpal);
 }
 
 /* header Secundario*/
@@ -195,21 +202,25 @@ nav {
     font-size: 1.1rem;
 }
 nav ul {
-    background-color:#323232;
+    background-color:var(--colorPpal);
     border-radius: 32px;
-    color: azure;
+    color: var(--colorFont);
 }
 .menu i {
     font-size: 2rem;
-    background-color: white;
-    color: black;
+    background-color: var(--colorFont);
+    color:var(--colorPpal);
     border-radius: 50%;
     padding: .5rem;
 }
-li i:hover {
-    background-color: black;
+li i:hover{
+    background-color: var(--colorPpal);
     color: white;
     transition: all .7s;
+}
+.faqsIcono{
+    background-color: var(--colorPpal);
+    color: white !important;
 }
 .animaText:hover{
     transform: scale(1.1);
@@ -250,7 +261,7 @@ li i:hover {
 }
 .tarjeta i {
     font-size: 2rem;
-    background-color: #323232;
+    background-color: var(--colorPpal);
     padding: 0.4rem;
     border-radius: 4px;
     color: white;
@@ -278,7 +289,7 @@ li i:hover {
     align-items: start;
 }
 .objetivos h4, .objetivos span {
-    color: red;
+    color: var(--colorPpal);
     font-size: 1.8rem;
 }
 /* opiniones */
@@ -287,7 +298,7 @@ li i:hover {
     text-align: center;
 }
 .contenedorOpiniones h3{
-    color: red;
+    color: var(--colorPpal);
     margin: 0.7rem 0;
 }
 .contenedorOpiniones h2 {
@@ -299,6 +310,7 @@ li i:hover {
     border-radius: 8px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.297);
     margin: 1rem 0;
+    background-color: white;
 }
 .opiniones {
     display: flex;
@@ -315,7 +327,7 @@ li i:hover {
     border-radius: 8px;
 }
 .headOpinion h5{
-    color: red;
+    color:var(--colorPpal);
 }
 .opinion p{
     font-size: 0.7rem;

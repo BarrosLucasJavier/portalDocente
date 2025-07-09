@@ -3,7 +3,12 @@ import { colocaError } from "../js/validaciones.js";
 
 localStorage.setItem('userDatos',JSON.stringify(userDatos));
 localStorage.setItem('usuarios',JSON.stringify(usuarios));
-
+window.addEventListener('DOMContentLoaded',()=>{
+    const colorGuardado = localStorage.getItem('color');
+    if (colorGuardado) {
+        document.documentElement.style.setProperty('--colorPpal', colorGuardado);
+    }
+})
 export function guardarUsuarios(datos) {
     let usuariosGuardados = JSON.parse(localStorage.getItem('usuarios'));
     

@@ -13,7 +13,7 @@
 }
 .seteoDatos span {
     margin: 1rem 1.5rem 1.5rem 0;
-    color: #524B47;
+    color: var(--colorFont);
 }
 .seteoDatos h4 {
     margin: 1rem 0 0.4rem 0;

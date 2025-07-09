@@ -12,26 +12,88 @@
     <header>
         <nav>
             <ul class="menu">
-                <li><i class="fa-solid fa-circle-user"></i></li>
+                <li><a href="./user.html"><i class="fa-solid fa-circle-user"></i></a></li>
                 <li class="animaText"><a href="../index.html">Inicio</a></li>
                 <li class="animaText"><a href="./panelCarga.html">Carga de datos</a></li>
                 <li class="animaText"><a href="./asistencia.html">Asistencia</a></li>
                 <li class="animaText activo"><a href="">Listas de cotejo</a></li>
                 <li class="animaText"><a href="./estadisticas.html">Estadísticas</a></li>
-                <li><a href=""><i class="fa-regular fa-circle-question"></i></a></li>
+                <li><a href="./preguntas.html"><i class="fa-regular fa-circle-question"></i></a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="mainCotejo">
         <section id="seleccionCurso">
-            <select name="escuelaN" id="escuelaN"></select>
-            <select name="cursoN" id="cursoN"></select>
+            <div class="contenedorCurso">
+                <div class="selectCurso">
+                    <h3>Seleccione con que curso desea trabajar</h3>
+                    <select name="escuelaN" id="escuelaN">
+                        <option value="">Seleccione una Institución</option>
+                    </select>
+                    <select name="cursoN" id="cursoN">
+                        <option value="">Seleccione un Curso</option>
+                    </select>
+                </div>
+                <img src="../assets/img/notas.png" alt="caricatura de notas">
+            </div>
         </section>
         <section id="opcionesCurso">
-
+            <i class="fa-solid fa-address-book"></i>
+            <ul>
+                <li>Trabajos Practicos</li>
+                <li>Trabajos en clase</li>
+                <li>Examen Oral</li>
+                <li>Examen Escrito</li>
+                <li>Participación en clase</li>
+            </ul>
         </section>
         <section id="pantallaCurso">
-
+            <table class="tabla">
+                <thead>
+                    <th>Alumno</th>
+                    <th>Nota 1</th>
+                    <th>Nota 2</th>
+                    <th>Nota 3</th>
+                    <th>Nota 4</th>
+                </thead>
+                <tbody >
+                    <tr>
+                        <td>González, Agustín</td>
+                        <td>MB</td>
+                        <td>B</td>
+                        <td>4.5</td>
+                        <td>7.5</td>
+                    </tr>
+                    <tr>
+                        <td>González, Agustín</td>
+                        <td>MB</td>
+                        <td>B</td>
+                        <td>4.5</td>
+                        <td>7.5</td>
+                    </tr>
+                    <tr>
+                        <td>González, Agustín</td>
+                        <td>MB</td>
+                        <td>B</td>
+                        <td>4.5</td>
+                        <td>7.5</td>
+                    </tr>
+                    <tr>
+                        <td>González, Agustín</td>
+                        <td>MB</td>
+                        <td>B</td>
+                        <td>4.5</td>
+                        <td>7.5</td>
+                    </tr>
+                    <tr>
+                        <td>González, Agustín</td>
+                        <td>MB</td>
+                        <td>B</td>
+                        <td>4.5</td>
+                        <td>7.5</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
     <footer>
