@@ -114,16 +114,18 @@ listaCursos.classList.add('desaparece');
 btnCurso.addEventListener('click',(e)=>{
     e.preventDefault();
     
-    let valoresCursos= [turnoInput, anioInput,selectLetraoNumero ];
+    let valoresCursos= [turnoInput, anioInput,selectTipo, selectLetraoNumero  ];
 
     if (completo(valoresCursos)) {
 
         let tr = document.createElement('tr');
 
         for (const valor of valoresCursos) {
+            if (valor != selectTipo) {
                 let td = document.createElement('td');
                 td.textContent = valor.value === 'Maniana' ? 'Mañana' : valor.value;
                 tr.appendChild(td);
+            }   
             }
             
         let td = document.createElement('td');

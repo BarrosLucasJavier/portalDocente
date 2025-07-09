@@ -11,11 +11,9 @@
     width: 95vw;
     background-color:#F0F4FF;
 }
-
 #cargaCurso{
     background-color: rgb(224, 197, 252);
 }
-
 #cargaAlumno{
     background-color: rgb(197, 224, 170);
 }
@@ -38,6 +36,13 @@
     justify-content: space-between;
     gap: 0.5rem;
 }
+#formularioInstitucion .inputContenedor,
+#cursoContenedor .inputContenedor,
+#alumnoContenedor .inputContenedor {
+    margin: 1.5rem 0;
+    width: 450px;
+    font-size: 0.5rem;
+}
 .inputContenedor {
     position: relative;
     width: 100%;
@@ -45,7 +50,7 @@
     justify-content: center;
 
 }
-input{
+input, select{
     padding: 0.5rem 1rem;
     border-radius: 6px;
     border: 1px solid rgba(128, 128, 128, 0.268);
@@ -63,6 +68,16 @@ label {
     font-size: 0.9rem;
     background-color: transparent;
 }
+label[for="provincia"],
+label[for="ciudad"],
+label[for="provincia"],
+label[for="turno"],
+label[for="anioCurso"],
+label[for="divisionCursoTipo"],
+label[for="divisionCurso"]{
+    position: absolute;
+    top: -17px;
+}
 input:focus + label,
 input:not(:placeholder-shown) + label,
 input:valid + label {
@@ -71,7 +86,7 @@ input:valid + label {
     font-size: 12px;
     color: #333;
 }
-#btnEscuela
+#btnEscuela, #btnCurso, #btnAlumno
 {
     border: 1px solid lightblue;
     cursor: pointer;

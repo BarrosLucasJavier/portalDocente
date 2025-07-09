@@ -1,7 +1,7 @@
-import { user, usuarios } from "../assets/data/users.js";
+import { userDatos, usuarios } from "../assets/data/users.js";
 import { colocaError } from "../js/validaciones.js";
 
-localStorage.setItem('users',JSON.stringify(user));
+localStorage.setItem('userDatos',JSON.stringify(userDatos));
 localStorage.setItem('usuarios',JSON.stringify(usuarios));
 
 export function guardarUsuarios(datos) {
@@ -14,10 +14,8 @@ export function guardarUsuarios(datos) {
         apellido: datos[2].value,
         contrasenia: datos[3].value
     }
-    console.log(usuariosGuardados);
     usuariosGuardados.push(userNuevo);
-    localStorage.setItem('usuarios',JSON.stringify(usuariosGuardados))
-    
+    localStorage.setItem('usuarios',JSON.stringify(usuariosGuardados));
 }
 
 export function controlarUser(usu, pass) {
@@ -26,7 +24,7 @@ export function controlarUser(usu, pass) {
     for (const usua of usuariosGuard) {
         if (usua.correo.trim() === usu.value.trim()) {
             if (usua.contrasenia === pass.value) {
-                return true;
+                return usua.id;
             } else {
                 colocaError(pass,'Contraseña incorrecta');
                 return false
@@ -36,3 +34,21 @@ export function controlarUser(usu, pass) {
     colocaError(usu,'Usuario incorrecto');
 }
 
+export function seteoDatos(id) {
+    let todosUsuarios = JSON.parse(localStorage.getItem('usuarios'));
+    let todosDatos = JSON.parse(localStorage.getItem('userDatos'));
+
+    for (const elUsusario of todosUsuarios ) {
+        
+        if (elUsusario.id === id) {
+            localStorage.setItem('usuario',JSON.stringify(elUsusario));
+            break;
+        }
+    }
+    for (const datos of todosDatos) {
+        if (datos.id === id) {
+            localStorage.setItem('usuarioDatos',JSON.stringify(datos));
+            break;
+        }
+    }
+}

@@ -34,24 +34,24 @@
                 <div id="institucionContenedor">
                     <div id="formularioInstitucion">
                         <div class="inputContenedor">
+                            <input type="text" name="institucion" id="institucion" placeholder="" required autocomplete="off"/>
                             <label for="institucion">Nombre de la Institución</label>
-                            <input type="text" name="institucion" id="institucion" />
                         </div>
                         <div class="inputContenedor">
-                            <label for="provincia">Provincia</label>
+                            <label for="provincia"></label>
                             <select name="provincia" id="provincia">
                                 <option value="">Seleccione una Provincia</option>
                             </select>
                         </div>
                         <div class="inputContenedor">
-                            <label for="ciudad">Ciudad</label>
+                            <label for="ciudad"></label>
                             <select name="ciudad" id="ciudad">
                                 <option value="">Seleccione una Ciudad</option>
                             </select>
                         </div>
                         <div class="inputContenedor">
+                            <input type="text" name="direccion" id="direccion" placeholder="" required autocomplete="off"/>
                             <label for="direccion">Dirección</label>
-                            <input type="text" name="direccion" id="direccion" />
                         </div>
                         <div class="inputContenedor">
                             <input type="submit" value="Cargar" id="btnEscuela">
@@ -83,18 +83,18 @@
                 <div id="cursoContenedor">
                     <div>
                         <div class="inputContenedor">
-                            <label for="turno">Turno</label>
+                            <label for="turno"></label>
                             <select name="turno" id="turno">
-                                <option value="">Selecciona una opción</option>
+                                <option value="">Selecciona un Turno</option>
                                 <option value="Maniana">Mañana</option>
                                 <option value="Tarde">Tarde</option>
                                 <option value="Noche">Noche</option>
                             </select>
                         </div>
                         <div class="inputContenedor">
-                            <label for="anioCurso">Año</label>
+                            <label for="anioCurso"></label>
                             <select name="anioCurso" id="anioCurso">
-                                <option value="">Seleccione una opción</option>
+                                <option value="">Seleccione un Año</option>
                                 <option value="1">1º</option>
                                 <option value="2">2º</option>
                                 <option value="3">3º</option>
@@ -105,16 +105,17 @@
                             </select>
                         </div>
                         <div class="inputContenedor">
-                            <label for="divisionCursoTipo">Tipo División</label>
+                            <label for="divisionCursoTipo"></label>
                             <select name="divisionCursoTipo" id="divisionCursoTipo">
-                                <option value="">Seleccione un opción</option>
+                                <option value="">Seleccione un tipo División</option>
                                 <option value="letra">Letra</option>
                                 <option value="numero">Número</option>
                             </select>
                         </div>
                         <div class="inputContenedor">
-                            <label for="divisionCurso">División</label>
+                            <label for="divisionCurso"></label>
                             <select name="divisionCurso" id="divisionCurso">
+                                <option value="">Seleccione un tipo División</option>
                             </select>
                         </div>
                         <div class="inputContenedor">
@@ -146,12 +147,12 @@
                 <div id="alumnoContenedor">
                     <div>
                         <div class="inputContenedor">
+                            <input type="text" name="apellido" id="apellido" placeholder="" required autocomplete="off">
                             <label for="apellido">Apellido</label>
-                            <input type="text" name="apellido" id="apellido">
                         </div>
                         <div class="inputContenedor">
+                            <input type="text" name="nombre" id="nombre" placeholder="" required autocomplete="off">
                             <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" id="nombre">
                         </div>
                         <div class="inputContenedor">
                             <input type="submit" value="Cargar" id="btnAlumno">

@@ -9,6 +9,7 @@
 .seteoDatos select {
     padding: 0.5rem 0.7rem;
     margin: 1rem 0.5rem ;
+    width: auto;
 }
 .seteoDatos span {
     margin: 1rem 1.5rem 1.5rem 0;
@@ -50,8 +51,13 @@ table.tablaAsistencia{
     cursor: pointer;
 }
 #guardar {
-    background-color: rgb(52, 210, 84);
+    background-color: rgb(116, 239, 141);
 }
 #cancelar {
-    background-color: burlywood;
+    background-color: rgb(222, 135, 135);
+}
+#guardadoP {
+    margin: 1rem 0;
+    color: rgb(3, 193, 3);
+    font-weight: bolder;
 }

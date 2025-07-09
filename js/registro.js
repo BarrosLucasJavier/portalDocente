@@ -1,5 +1,5 @@
 import { completo, validaMail, quitaError, validaContrasenia } from "./validaciones.js";
-import { guardarUsuarios, controlarUser } from "./main.js";
+import { guardarUsuarios, controlarUser, seteoDatos } from "./main.js";
 document.addEventListener('DOMContentLoaded',()=>{
 
     /* botones */
@@ -26,15 +26,16 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     btnLogin.addEventListener('click',(e)=>{
         e.preventDefault();
-        if (completo([usu,pass]) && controlarUser(usu, pass) ) {
-            localStorage.setItem('usuarioActual',usu.id)
-            window.location.href = './panelCarga.html'
-        } else {
-            
-        }
-        ;
-        ;
-    })
+        
+        if (completo([usu,pass]) ) {
+            let validoUser = controlarUser(usu, pass);
+            if (validoUser) {
+                seteoDatos(validoUser)
+                window.location.href = './panelCarga.html'
+            }
+        }  
+    });
+
     btnRegistro.addEventListener('click',(e)=>{
         e.preventDefault();
         formRegistro.style.display='block';
@@ -50,7 +51,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         }
         
     })
-
+/* LIMPIA ERRORES */
     email.addEventListener('input', ()=>{
         quitaError(email);
     });

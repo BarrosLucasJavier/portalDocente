@@ -1,4 +1,4 @@
-export const user = [
+export const userDatos = [
     {
         id: 1,
         institucion: [
@@ -14,23 +14,28 @@ export const user = [
                         turno: 'Mañana',
                         alumnos: [{
                             nombre: 'Pedro',
-                            apellido: 'Rosas'
+                            apellido: 'Rosas',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Miguel',
-                            apellido: 'Santis'
+                            apellido: 'Santis',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Aldana',
-                            apellido: 'Bomer'
+                            apellido: 'Bomer',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Luis',
-                            apellido: 'Jadul'
+                            apellido: 'Jadul',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Ana Maria',
-                            apellido: 'Lego'
+                            apellido: 'Lego',
+                            asistencia:[]
                         },
                         ]
                     },
@@ -40,23 +45,28 @@ export const user = [
                         turno: 'Tarde',
                         alumnos: [{
                             nombre: 'Julian',
-                            apellido: 'Romual'
+                            apellido: 'Romual',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Aldana',
-                            apellido: 'Miyun'
+                            apellido: 'Miyun',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Pablo',
-                            apellido: 'Pilo'
+                            apellido: 'Pilo',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Luis',
-                            apellido: 'Jadul'
+                            apellido: 'Jadul',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Ana Maria',
-                            apellido: 'Lego'
+                            apellido: 'Lego',
+                            asistencia:[]
                         },
                         ]
                     },
@@ -66,23 +76,28 @@ export const user = [
                         turno: 'Tarde',
                         alumnos: [{
                             nombre: 'Alonso',
-                            apellido: 'Suter'
+                            apellido: 'Suter',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Mirta',
-                            apellido: 'Minujin'
+                            apellido: 'Minujin',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Blas',
-                            apellido: 'Pascal'
+                            apellido: 'Pascal',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Luis',
-                            apellido: 'Fonno'
+                            apellido: 'Fonno',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Ana Maria',
-                            apellido: 'Lego'
+                            apellido: 'Lego',
+                            asistencia:[]
                         },
                         ]
                     }
@@ -105,23 +120,28 @@ export const user = [
                         turno: 'Tarde',
                         alumnos: [{
                             nombre: 'Ana',
-                            apellido: 'Pedrosa'
+                            apellido: 'Pedrosa',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Nahuel',
-                            apellido: 'Moreno'
+                            apellido: 'Moreno',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Yoana',
-                            apellido: 'Cabrera'
+                            apellido: 'Cabrera',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Juan',
-                            apellido: 'Dometrio'
+                            apellido: 'Dometrio',
+                            asistencia:[]
                         },
                         {
                             nombre: 'Julieta',
-                            apellido: 'Romeo'
+                            apellido: 'Romeo',
+                            asistencia:[]
                         },
                         ]
                     }
@@ -143,11 +163,21 @@ export const user = [
                         division: 'A',
                         turno: 'Mañana',
                         alumnos: [
-                            { nombre: 'Valentina', apellido: 'Méndez' },
-                            { nombre: 'Ezequiel', apellido: 'Rojas' },
-                            { nombre: 'Luciana', apellido: 'Vega' },
-                            { nombre: 'Damián', apellido: 'Funes' },
-                            { nombre: 'Sofía', apellido: 'Navarro' }
+                            { nombre: 'Valentina', 
+                                apellido: 'Méndez',
+                            asistencia:[] },
+                            { nombre: 'Ezequiel', 
+                                apellido: 'Rojas',
+                            asistencia:[] },
+                            { nombre: 'Luciana', 
+                                apellido: 'Vega',
+                            asistencia:[] },
+                            { nombre: 'Damián', 
+                                apellido: 'Funes',
+                            asistencia:[] },
+                            { nombre: 'Sofía', 
+                                apellido: 'Navarro',
+                            asistencia:[] }
                         ]
                     }
                 ]
@@ -168,11 +198,11 @@ export const user = [
                         division: 'B',
                         turno: 'Tarde',
                         alumnos: [
-                            { nombre: 'Gabriel', apellido: 'Salas' },
-                            { nombre: 'Martina', apellido: 'Quiroga' },
-                            { nombre: 'Iván', apellido: 'Lopez' },
-                            { nombre: 'Brenda', apellido: 'Ojeda' },
-                            { nombre: 'Tomás', apellido: 'Zalazar' }
+                            { nombre: 'Gabriel', apellido: 'Salas',asistencia:[] },
+                            { nombre: 'Martina', apellido: 'Quiroga',asistencia:[] },
+                            { nombre: 'Iván', apellido: 'Lopez',asistencia:[] },
+                            { nombre: 'Brenda', apellido: 'Ojeda',asistencia:[] },
+                            { nombre: 'Tomás', apellido: 'Zalazar',asistencia:[] }
                         ]
                     }
                 ]
