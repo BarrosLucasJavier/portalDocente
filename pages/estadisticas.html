@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/e0b4e5cac3.js" crossorigin="anonymous"></script>
-    <title>Portal Asistencias</title>
+    <title>Portal Estadísticas</title>
 </head>
-
 <body>
     <header>
         <nav>
@@ -17,65 +15,15 @@
                 <li><i class="fa-solid fa-circle-user"></i></li>
                 <li class="animaText"><a href="../index.html">Inicio</a></li>
                 <li class="animaText"><a href="./panelCarga.html">Carga de datos</a></li>
-                <li class="animaText activo"><a href="#">Asistencia</a></li>
+                <li class="animaText"><a href="./asistencia.html">Asistencia</a></li>
                 <li class="animaText"><a href="./listasCotejo.html">Listas de cotejo</a></li>
-                <li class="animaText"><a href="./estadisticas.html">Estadísticas</a></li>
+                <li class="animaText activo"><a href="">Estadísticas</a></li>
                 <li><a href=""><i class="fa-regular fa-circle-question"></i></a></li>
             </ul>
         </nav>
     </header>
-    <main id="contenedorAsistencia">
-        <div class="seteoDatos">
-            <h3>Seleccione el curso</h3>
-            <select name="escuela" id="escuela">
-                <option value="">Seleccione una institución</option>
-            </select>
-            <select name="curso" id="curso">
-                <option value="">Seleccione un curso</option>
-            </select>
+    <main>
 
-            <h4>Referencias</h4>
-            <span>P = Presente</span>
-            <span>A = Ausente</span>
-            <span>T = Llegada tarde</span>
-            <span>P = Justificado</span>
-        </div>
-        <div class="listaAsistencia">
-            <table class="tablaAsistencia">
-                <thead>
-                    <th>Alumno</th>
-                    <th>L</th>
-                    <th>M</th>
-                    <th>M</th>
-                    <th>J</th>
-                    <th>V</th>
-                    <th>L</th>
-                    <th>M</th>
-                    <th>M</th>
-                    <th>J</th>
-                    <th>V</th>
-                    <th>L</th>
-                    <th>M</th>
-                    <th>M</th>
-                    <th>J</th>
-                    <th>V</th>
-                    <th>L</th>
-                    <th>M</th>
-                    <th>M</th>
-                    <th>J</th>
-                    <th>V</th> 
-                </thead>
-                <tbody id="tablaAsistencia">
-                    <tr>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="botones">
-                <button id="guardar">Guardar</button>
-                <button id="cancelar">Cancelar</button>
-                <p id="guardadoP"></p>
-            </div>
-        </div>
     </main>
     <footer>
         <div class="tituloFooter">
@@ -106,7 +54,5 @@
             <p>&copy; 2025 Lucas. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src="../js/asistencia.js" type="module"></script>
 </body>
-
 </html>

@@ -33,6 +33,7 @@
     height: 100%;
     background-color: antiquewhite;
     border: none;
+    padding: 0;
 }
 table.tablaAsistencia{
     border-spacing:0.1rem 0.3rem;

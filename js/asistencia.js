@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded',()=>{
     
-    const user = JSON.parse(localStorage.getItem('usuarioDatos'));    
+    let user = JSON.parse(localStorage.getItem('usuarioDatos'));    
     
     const escuela = document.getElementById('escuela');
     const curso = document.getElementById('curso')
@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     escuela.addEventListener('click',(e)=>{
         const escuelaSelect = +e.target.value;
         localStorage.setItem('escuela', escuelaSelect);
+        curso.innerHTML = '<option value="">Seleccione un curso</option>';
         
         if (e.target.value) {
             user.institucion[escuelaSelect].curso.forEach((aniox, index)=>{
@@ -36,16 +37,25 @@ window.addEventListener('DOMContentLoaded',()=>{
             localStorage.setItem('curso',cursoSelect);
             const escuelaSelect = localStorage.getItem('escuela');
             let alumnado =user.institucion[escuelaSelect].curso[cursoSelect].alumnos;
-            const selectAsistencia = `<select class="asistencia-select">
-                                        <option value=""></option>
-                                        <option value="P">P</option>
-                                        <option value="A">A</option>
-                                        <option value="T">T</option>
-                                        <option value="J">J</option>
-                                    </select>`;
+            
             alumnado.forEach(alumno => {
-                const fila = document.createElement('tr');
-                fila.innerHTML = `<td>${alumno.apellido}, ${alumno.nombre}</td>` + `<td>${selectAsistencia}</td>`.repeat(20)
+                let fila = document.createElement('tr');
+                let td = `<td>${alumno.apellido}, ${alumno.nombre}</td>`;
+
+                for (let i = 0; i < 20; i++) {
+                    const valor = alumno.asistencia?.[i] || "";
+                    
+                    td += `<td>
+                            <select>
+                                <option value="" ${valor === "" ? "selected" : ""}></option>
+                                <option value="P" ${valor === "P" ? "selected" : ""}>P</option>
+                                <option value="A" ${valor === "A" ? "selected" : ""}>A</option>
+                                <option value="T" ${valor === "T" ? "selected" : ""}>T</option>
+                                <option value="J" ${valor === "J" ? "selected" : ""}>J</option>
+                            </select>
+                        </td>`
+                }
+                fila.innerHTML = td;
                 tablaAsist.appendChild(fila)    
             }) 
         }       
@@ -54,14 +64,19 @@ window.addEventListener('DOMContentLoaded',()=>{
     /* guardado */
     const btnGuardar = document.getElementById('guardar');
     const guardadoP = document.getElementById('guardadoP')
-    btnGuardar.addEventListener('click',()=>{
     
+    btnGuardar.addEventListener('click',()=>{
+        const esc = localStorage.getItem('escuela');
+        const cur = +localStorage.getItem('curso');
+        
         for (let i = 0; i < tablaAsist.rows.length; i++) {
             const fila = tablaAsist.rows[i];
             const datos = [];
             for (let j = 1; j < fila.cells.length; j++) {
                 const td = fila.cells[j];
+                
                 const select = td.querySelector('select');
+                
                 if (select) {
                     datos.push(select.value)
                 } else {
@@ -69,8 +84,19 @@ window.addEventListener('DOMContentLoaded',()=>{
                 }
             }
             
-            user.institucion[localStorage.getItem('escuela')].curso[+localStorage.getItem('curso')].alumnos[i].asistencia = datos;
+            user.institucion[esc].curso[cur].alumnos[i].asistencia = datos;
         }
-        guardadoP.textContent = 'Datos guardados'
+        guardadoP.textContent = 'Datos guardados';
+        setTimeout(()=>{
+            guardadoP.textContent = '';
+        },3000)
+        localStorage.setItem('usuarioDatos',JSON.stringify(user)); 
+    })
+
+    /* cancel */
+    const btnCancelar = document.getElementById('cancelar');
+
+    btnCancelar.addEventListener('click',()=>{
+        curso.dispatchEvent(new Event('click'));
     })
 })

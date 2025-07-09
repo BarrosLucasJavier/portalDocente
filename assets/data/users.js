@@ -15,7 +15,7 @@ export const userDatos = [
                         alumnos: [{
                             nombre: 'Pedro',
                             apellido: 'Rosas',
-                            asistencia:[]
+                            asistencia:['P','P','A','P','P','T','P','P','J']
                         },
                         {
                             nombre: 'Miguel',
