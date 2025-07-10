@@ -1,13 +1,26 @@
 import { userDatos, usuarios } from "../assets/data/users.js";
 import { colocaError } from "../js/validaciones.js";
 
+if (!localStorage.getItem('usuarios')) {
+    localStorage.setItem('usuarios',JSON.stringify(usuarios));
+}
 localStorage.setItem('userDatos',JSON.stringify(userDatos));
-localStorage.setItem('usuarios',JSON.stringify(usuarios));
+
 window.addEventListener('DOMContentLoaded',()=>{
     const colorGuardado = localStorage.getItem('color');
     if (colorGuardado) {
         document.documentElement.style.setProperty('--colorPpal', colorGuardado);
     }
+
+    const btnRegistrar = document.getElementById('btnRegistrar');
+    btnRegistrar.addEventListener('click',(e)=>{
+        e.preventDefault();
+        if (localStorage.getItem('usuario')) {
+            window.location.href = './pages/panelCarga.html'
+        }else {
+            window.location.href = e.target.href;
+        }
+    })
 })
 export function guardarUsuarios(datos) {
     let usuariosGuardados = JSON.parse(localStorage.getItem('usuarios'));
@@ -20,6 +33,7 @@ export function guardarUsuarios(datos) {
         contrasenia: datos[3].value
     }
     usuariosGuardados.push(userNuevo);
+    localStorage.setItem('usuario',userNuevo)
     localStorage.setItem('usuarios',JSON.stringify(usuariosGuardados));
 }
 

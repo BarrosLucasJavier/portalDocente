@@ -2,6 +2,11 @@ import { completo, validaMail, quitaError, validaContrasenia } from "./validacio
 import { guardarUsuarios, controlarUser, seteoDatos } from "./main.js";
 document.addEventListener('DOMContentLoaded',()=>{
 
+    const colorGuardado = localStorage.getItem('color');
+    if (colorGuardado) {
+        document.documentElement.style.setProperty('--colorPpal', colorGuardado);
+    }
+
     /* botones */
     const btnRegistro = document.getElementById('registro');
     const btnRegistrar = document.getElementById('btnRegistrar');

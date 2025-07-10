@@ -4,7 +4,12 @@ import { cursosLetra, cursosNumero } from "../assets/data/cursos.js";
 import { completo } from "./validaciones.js";
 import { limpiar } from "./funciones.js";
 
-
+window.addEventListener('DOMContentLoaded',()=>{
+    const colorGuardado = localStorage.getItem('color');
+    if (colorGuardado) {
+        document.documentElement.style.setProperty('--colorPpal', colorGuardado);
+    }
+})
 /* -------------- Pestaña Escuelas --------------------- */
 /* cargar provincias */
 let selectProvincias = document.getElementById('provincia');

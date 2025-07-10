@@ -1,5 +1,10 @@
 window.addEventListener('DOMContentLoaded',()=>{
-    
+
+    const colorGuardado = localStorage.getItem('color');
+    if (colorGuardado) {
+        document.documentElement.style.setProperty('--colorPpal', colorGuardado);
+    }
+
     let user = JSON.parse(localStorage.getItem('usuarioDatos'));    
     
     const escuela = document.getElementById('escuela');

@@ -3,6 +3,7 @@
 @import url("./registro.css");
 @import url("./cotejo.css");
 @import url("./faqs.css");
+@import url("./user.css");
 
 :root {
     --colorPpal: #915EE1;
